@@ -1,0 +1,6 @@
+{
+  "name": "AftermathVision",
+  "description": "AI-powered building damage assessment system using pre- and post-disaster satellite imagery and deep learning to classify structural damage after disasters.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    background-color: #0b0b0a;
+    color: #f2f0ea;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #0b0b0a;
+    color: #f2f0ea;
+  }
+
+  :focus-visible {
+    outline: 1px solid #c6a76a;
+    outline-offset: 3px;
+  }
+}
+
+.font-serif-display {
+  font-family: var(--font-serif-display);
+}
+
+.font-display {
+  font-family: var(--font-sans);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Whisper-quiet architectural reference grid for non-WebGL fallback */
+.bg-orbital-grid {
+  background-image:
+    linear-gradient(to right, rgba(242, 240, 234, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(242, 240, 234, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.hairline-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1px;
+  background: #242421;
+  outline: none;
+}
+
+.hairline-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 12px;
+  background: #c6a76a;
+  cursor: ew-resize;
+  border: none;
+}
+
+.hairline-range::-moz-range-thumb {
+  width: 3px;
+  height: 12px;
+  background: #c6a76a;
+  cursor: ew-resize;
+  border: none;
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
